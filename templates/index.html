@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduExcel | College Management System</title>
+    <style>
+        /* --- CSS STYLES --- */
+        :root { --primary: #1f314b; --secondary: #2b6cb0; --accent: #ed8936; --light: #f7fafc; --dark: #2d3748; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { line-height: 1.6; color: var(--dark); background: #fff; scroll-behavior: smooth; }
+        
+        /* Navigation */
+        header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; max-width: 1200px; margin: auto; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-transform: uppercase; }
+        .nav-links { display: flex; list-style: none; gap: 15px; }
+        .nav-links a { text-decoration: none; color: var(--dark); font-size: 0.9rem; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--secondary); }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.8)), url('https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&w=1350&q=80') center/cover; 
+                height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 0 20px; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .btn { padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; margin: 10px; display: inline-block; transition: 0.3s; border: none; cursor: pointer; }
+        .btn-apply { background: var(--accent); color: white; }
+        .btn-login { border: 2px solid white; color: white; }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+
+        /* General Layout */
+        section { padding: 60px 5%; max-width: 1200px; margin: auto; }
+        .section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; color: var(--primary); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        
+        /* Cards & Components */
+        .card { padding: 30px; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; border-top: 4px solid var(--secondary); }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
+        .stats-bar { background: var(--primary); color: white; display: flex; flex-wrap: wrap; justify-content: space-around; padding: 40px 5%; text-align: center; }
+
+        /* Form */
+        form { display: grid; gap: 15px; max-width: 600px; margin: auto; }
+        input, textarea { padding: 12px; border: 1px solid #ddd; border-radius: 5px; width: 100%; }
+        footer { background: var(--primary); color: white; text-align: center; padding: 30px; margin-top: 50px; }
+
+        @media (max-width: 768px) { .nav-links { display: none; } .hero h1 { font-size: 2rem; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">EduExcel College</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#admissions">Admissions</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" style="color: var(--accent);">Student Portal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>Empowering Education for a Better Future</h1>
+            <p>Join a community of excellence and innovation.</p><br>
+            <a href="#" class="btn btn-apply">Apply Now</a>
+            <a href="#" class="btn btn-login">Student Login</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Our Institution</h2>
+        <div style="text-align: center; max-width: 800px; margin: auto;">
+            <p>We provide a world-class learning environment focused on academic excellence and holistic development.</p><br>
+            <div class="grid">
+                <div class="card"><h3>Vision</h3><p>To be a global leader in transformative education.</p></div>
+                <div class="card"><h3>Mission</h3><p>Fostering innovation and integrity in every student.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" style="background: var(--light);">
+        <h2 class="section-title">Academic Programs</h2>
+        <div class="grid">
+            <div class="card"><h3>Engineering</h3><p>Cutting-edge tech and research-driven labs.</p></div>
+            <div class="card"><h3>Management</h3><p>Developing future leaders and entrepreneurs.</p></div>
+            <div class="card"><h3>Science</h3><p>Exploring the mysteries of the universe.</p></div>
+            <div class="card"><h3>Arts</h3><p>Cultivating creativity and cultural understanding.</p></div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Campus Facilities</h2>
+        <div class="grid">
+            <div class="card">Modern Library</div>
+            <div class="card">Smart Classrooms</div>
+            <div class="card">Athletic Center</div>
+            <div class="card">Research Labs</div>
+        </div>
+    </section>
+
+    <div class="stats-bar">
+        <div><h2>5000+</h2><p>Students</p></div>
+        <div><h2>200+</h2><p>Faculty</p></div>
+        <div><h2>45+</h2><p>Courses</p></div>
+        <div><h2>25+</h2><p>Years of Excellence</p></div>
+    </div>
+
+    <section id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="grid">
+            <div>
+                <h3>Get In Touch</h3>
+                <p>📍 123 Education Lane, Knowledge City</p>
+                <p>📞 +1 234 567 890</p>
+                <p>📧 info@eduexcel.edu</p>
+            </div>
+            <form id="contactForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit" class="btn btn-apply" style="margin:0">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 EduExcel College. All Rights Reserved.</p>
+        <p style="margin-top: 10px;">FB | TW | LN | IG</p>
+    </footer>
+  <script>
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();   // 🔥 VERY IMPORTANT
+
+    const formData = {
+        name: this.querySelector('input[type="text"]').value,
+        email: this.querySelector('input[type="email"]').value,
+        message: this.querySelector('textarea').value
+    };
+
+    const submitBtn = this.querySelector('button');
+    submitBtn.innerText = 'Sending...';
+    submitBtn.disabled = true;
+
+    try {
+        const response = await fetch('/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            alert("Success: " + result.message);
+            this.reset();
+        } else {
+            alert("Error: " + result.message);
+        }
+    } catch (error) {
+        alert("Backend server chalu nahi hai. Pehle app.py run karo.");
+    } finally {
+        submitBtn.innerText = 'Send Message';
+        submitBtn.disabled = false;
+    }
+});
+</script>
+</body>
+</html>
