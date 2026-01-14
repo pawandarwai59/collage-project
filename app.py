@@ -34,7 +34,7 @@ def home():
     return render_template("index.html")
 
 # API for form submit
-@app.route('/contact', methods=['POST'])
+@app.route('/api/contact', methods=['POST'])
 def save_contact():
     try:
         data = request.get_json()
